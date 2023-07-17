@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Netlify Alerts</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="./client.js"></script>
+</head>
+    <div class="copy-banner">Copied to clipboard</div>
+
+    <h1>Netlify Alerts</h1>
+    <button onclick="subscribe()">Generate Webhook</button>
+    <button onclick="unsubscribe()">Delete Webhook</button> </br> </br>
+    <span id="url" onclick="copyToClipboard()"></span>
+
+    <p>
+        <b>Use this tool to enable Desktop push notifications when Netlify deploys your website!</b><br>
+        Click on <code>Generate Webhook</code> to get your webhook URL.<br>
+        In Netlify, navigate to <code>Site Configuration > Build & Deploy > Deploy notifications</code>.<br>
+        Choose <code>Add notification > Outgoing webhook</code>.<br>
+        Choose <code>Deploy succeeded</code> as the <code>event to listen for</code>.<br>
+        Paste the Webhook URL as the <code>URL to notify</code>.<br>
+        Save the webhook and you're done!
+    </p>
+</body>
+</html>

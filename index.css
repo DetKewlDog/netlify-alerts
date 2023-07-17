@@ -1,0 +1,141 @@
+:root {
+    --col-bg1: #060B10;
+    --col-bg2: #12181F;
+    --col-bg3: #191F26;
+
+    --col-btn-blue1: #32E6E2;
+    --col-btn-blue2: #8EFBF7;
+    --col-btn-blue3: #054861;
+    --col-btn-blue4: #5CEBDF;
+
+    --col-btn-red1: #800A20;
+    --col-btn-red2: #AF2536;
+    --col-btn-red3: #530000;
+    --col-btn-red4: #971026;
+
+    --col-btn-txt: #0C2A2A;
+
+    --col-border1: #7E8792;
+    --col-border2: #ABB5BF;
+
+    --tw-shadow-blue: 0 0 0 1px var(--col-btn-blue3), 0 0 0 .25rem var(--col-btn-blue4);
+    --tw-shadow-red: 0 0 0 1px var(--col-btn-red3), 0 0 0 .25rem var(--col-btn-red4);
+    --tw-shadow-colored: 0 0 0 1px var(--tw-shadow-color), 0 0 0 .25rem var(--tw-shadow-color);
+}
+
+body {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--col-bg1);
+    font-weight: 600;
+}
+
+.cursor-wait * {
+    cursor: wait !important;
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    width: 40%;
+    text-align: center;
+    margin-inline: 30%;
+}
+p code {
+    background-color: var(--col-bg3);
+    border-radius: 6px;
+    padding: 2px 2px;
+}
+
+button {
+    border-radius: 6px;
+    border: none;
+    background-color: var(--col-btn-blue1);
+    color: var(--col-btn-text);
+    padding: 8px 16px;
+    font-weight: 550;
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: var(--col-btn-blue2);
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+button:not(:hover),
+button:not(:active) {
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+button:active {
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow-blue);
+}
+
+button:nth-of-type(2) {
+    background-color: var(--col-btn-red1);
+    color: white;
+}
+
+button:nth-of-type(2):hover {
+    background-color: var(--col-btn-red2)
+}
+
+button:nth-of-type(2):active {
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow-red);
+}
+
+#url {
+    position: relative;
+    padding: 16px 20px;
+    background-color: var(--col-bg2);
+    border-radius: 5px;
+    border: 0.8px solid var(--col-border1);
+    color: white;
+    width: 80%;
+    height: 26.4px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+#url:empty {
+    cursor: default;
+}
+
+#url:hover {
+    background-color: var(--col-bg3);
+    border: 0.8px solid var(--col-border2);
+}
+
+#url:active {
+    background-color: var(--col-bg2);
+    border: 0.8px solid var(--col-border1);
+}
+
+.copy-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    color: var(--col-btn-text);
+    background-color: var(--col-btn-blue1);
+    transition: opacity .2s ease-in-out;
+    font-weight: 600;
+    font-size: 24px;
+    padding: 0.2em;
+}
+
+.copy-banner.show {
+    opacity: 1;
+}
