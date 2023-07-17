@@ -46,7 +46,7 @@ app.post("/push/:id", async (req, res) => {
         .single();
     if (!data) return;
     res.status(201).json({});
-    const subscription = JSON.parse(data);
+    const subscription = JSON.parse(data['subscription']);
     const body = req.body;
     const strToTitle = (str) => str.charAt(0).toUpperCase() + str.slice(1);
     webpush.sendNotification(subscription,
