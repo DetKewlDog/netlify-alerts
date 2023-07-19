@@ -14,7 +14,7 @@ const express = require("express"),
     { createClient } = require('@supabase/supabase-js');
 
 const app = express();
-app.use(express.static(__dirname));
+app.use(express.static('public'));
 app.use(bodyParser.json());
 
 const supabase = createClient(supabaseUrl, supabaseKey)
